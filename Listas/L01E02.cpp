@@ -5,26 +5,32 @@ using namespace std;
 
 int main(){
     int len;
-    cout << "Input: ";
+    string frase;
+
     cin >> len;
     char letras[len];
+    int pontos[len]={};
     for(int i = 0; i < len; i++){
         cin >> letras[i];
     }
 
-    string frase;
-    cout << "Frase:" << endl;
-    getline (cin,frase,'\n');  // A linha esta sendo pulada
+
+    cin.ignore();
+    getline(cin, frase);
 
     for(int i = 0; i < len; i++){
-        for(int j = 0; i < frase.length(); j++){
+        for(int j = 0; j < frase.length(); j++){
             if(letras[i] == frase[j]){
-                frase.replace(j, 1, "#");
+                frase[j] = '#';
+                pontos[i]++;
             }
         }
     }
 
     cout << frase << endl;
+    for(int i = 0; i < len; i++){
+        cout << letras[i] << " " << pontos[i] << endl;
+    }
 
     return 0;
 }
