@@ -1,3 +1,11 @@
+/*
+Você deve escrever um programa capaz de ocultar letras em uma frase.
+Será informada uma lista de letras que devem ser substituídas por '#' (hash) 
+em toda a frase. A frase será composta por um número não conhecido
+anteriormente de palavras. Ao final, o programa deve imprimir a frase com as 
+devidas alterações e o número de vezes que cada letra foi substituída na frase.
+*/
+
 #include <iostream>
 #include <string>
 
