@@ -10,7 +10,7 @@ struct Robo{
     bool _com_bola;
 
 
-    Robo(int id, Ponto2D posicao, bool com_bola);
+    Robo(int id=0, Ponto2D posicao=Ponto2D(), bool com_bola=false);
 
     void mover(double v, double th, double t);
 
