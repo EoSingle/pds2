@@ -5,12 +5,12 @@ using namespace std;
 int main(){
 
     // 1) Declare uma variável do tipo inteiro e preencha com o valor informado na entrada
-    int x;
+    int x=0;
     cin >> x;
     
     // 2) Declare um ponteiro para inteiros e inicialize com valor nulo
     int *a;
-    *a = 0;
+    a = 0;
 
     // 3) Declare um vetor de inteiros com tamanho informado na entrada e preencha com os dados passados
     int len;
@@ -86,7 +86,11 @@ int main(){
 
     // 24) Imprima os elementos de (3) a partir variável do vetor utilizando a notação [] (colchetes)
     for(int i=0; i<len; i++){
-        cout << array[i] << " ";
+        if(i<len-1){
+            cout << array[i] << " ";
+        }else{
+            cout << array[i];
+        }
     }
     cout << endl;
 
@@ -94,8 +98,13 @@ int main(){
     // Ou seja, você NÃO deve efetivamente alterar o valor do ponteiro inicial de (3)
     a = array;
     for(int i=0; i<len; i++){
-        cout << *a << " ";
-        a++;
+        if(i<len-1){
+            cout << *a << " ";
+            a++;
+        }else{
+            cout << *a;
+            a++;
+        }
     }
     cout << endl;
 
@@ -103,7 +112,11 @@ int main(){
     // Ou seja, você NÃO deve efetivamente alterar o valor do ponteiro inicial de (3)
     a = array;
     for(int i=0; i<len; i++){
-        cout << *(a+i) << " ";
+        if(i<len-1){
+            cout << *(a+i) << " ";
+        }else{
+            cout << *(a+i);
+        }
     }
     cout << endl;
 
