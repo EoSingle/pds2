@@ -1,7 +1,7 @@
 #include "Ponto2D.hpp"
 #include <cmath>
 
-Ponto2D::Ponto2D(double x=0, double y=0) {
+Ponto2D::Ponto2D(double x, double y) {
     _x = x;
     _y = y;
 }
