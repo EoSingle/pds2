@@ -22,7 +22,7 @@ double Robo::calcular_distancia(Robo *robo) {
 Robo* Robo::determinar_robo_mais_proximo(Robo **time, int num_robos) {
     int id_near = 0;
     if(_id == 0) id_near = 1;
-    double menor_distancia = calcular_distancia(time[0]);
+    double menor_distancia = calcular_distancia(time[id_near]);
     for (int i = 0; i < num_robos; i++) {
         double distancia = calcular_distancia(time[i]);
         if (i!=_id && distancia < menor_distancia) {
