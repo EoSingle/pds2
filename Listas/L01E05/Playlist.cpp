@@ -48,14 +48,19 @@ void Playlist::remover_musica(int id){
 
     while(current != nullptr){
         if(current->_id == id){
-            if(previous == nullptr){
-                _head = current->_next;
-            }else if(current->_next == nullptr){
-                previous->_next=nullptr;
-                _tail=previous;
-            }else{
-                previous->_next = current->_next;
+            if(current != _head && current != _tail){
+            current->_previous->_next = current->_next;
+            current->_next->_previous = current->_previous;
             }
+            if(current == _head){
+                current->_next->_previous = nullptr;
+                _head = current->_next;
+            }
+            if(current == _tail){
+                current->_previous->_next = nullptr;
+                _tail = current->_previous;
+            }
+
             delete current;
             return;    
         }
@@ -116,14 +121,18 @@ void Playlist::desfavoritar_musica(int id){
 }
 
 void Playlist::tempo_total(float duracao){
-    int minutos = (int)duracao;
-    int segundos = (int)((duracao - minutos) * 60);
+    int segundos = duracao*60;
+    int minutos = segundos/60;
+    segundos = segundos%60;
+    int horas = minutos/60;
+    minutos = minutos%60;
+
     std::cout << std::setfill('0') << std::setw(2);
-    if(segundos == 0){
-        std::cout << "00:" << minutos << ":00";
-    }else{
-        std::cout << "00:" << minutos << ":" << segundos;
-    }
+    std::cout << horas << ":";
+    std::cout << std::setfill('0') << std::setw(2);
+    std::cout << minutos << ":";
+    std::cout << std::setfill('0') << std::setw(2);
+    std::cout << segundos;
 }
 
 

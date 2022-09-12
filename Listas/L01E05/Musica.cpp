@@ -13,14 +13,14 @@ Musica::Musica(int id, std::string nome, std::string artista, std::string album,
 }
 
 void Musica::normalize(float duracao){
-    int minutos = (int)duracao;
-    int segundos = (int)((duracao - minutos) * 60);
+    int segundos = duracao*60;
+    int minutos = segundos/60;
+    segundos = segundos%60;
+
     std::cout << std::setfill('0') << std::setw(2);
-    if(segundos == 0){
-        std::cout << minutos << ":00";
-    }else{
-        std::cout << minutos << ":" << segundos;
-    }
+    std::cout << minutos << ":";
+    std::cout << std::setfill('0') << std::setw(2);
+    std::cout << segundos;
 }
 
 void Musica::imprimir_dados(){
