@@ -1,21 +1,60 @@
 #include "Musica.hpp"
 #include "Playlist.hpp"
+#include "avaliacao_basica_playlist.hpp"
 #include <iostream>
+#include <string>
 
-int main(){
-    /*Musica m1(1, "A", "B", "C", 1.5, true);
-    m1.imprimir_dados();
-    Musica m2(2, "D", "E", "F", 2.5, false);
-    m2.imprimir_dados();*/
-
-    Playlist p;
-    p.adicionar_musica("Master Of Puppets", "Metallica", "Master Of Pupets", 6.0, true);
-    p.adicionar_musica("Slaughterhouse", "Motionless in the White", "Scoring the end of the world", 4.5, false);
-
-    p.imprimir();
-    p.remover_musica(1); // problema provavelmente está no id
-    p.imprimir();
-    p.remover_musica(2);
+int main() {
+    Playlist playlist;
+    char data;
+    while(cin>>data){
+        switch (data){
+            case 'a':{
+                string nome, artista, album;
+                float duracao;
+                cin>>nome>>artista>>album>>duracao;
+                playlist.adicionar_musica(nome, artista, album, duracao);
+                break;
+            }
+            case 's':{
+                string nome, artista;
+                cin>>nome>>artista;
+                Musica* musica = playlist.buscar_musica(nome, artista);
+                if(musica != nullptr){
+                    musica->imprimir_dados();
+                }else{
+                    cout<<"Musica nao encontrada"<<endl;
+                }
+                break;
+            }
+            case 'r':{
+                string nome, artista;
+                cin>>nome>>artista;
+                playlist.remover_musica(playlist.buscar_musica(nome, artista)->_id);
+                break;
+            }
+            case 'f':{
+                string nome, artista;
+                cin>>nome>>artista;
+                playlist.favoritar_musica(playlist.buscar_musica(nome, artista)->_id);
+                break;
+            }
+            case 'd':{
+                string nome, artista;
+                cin>>nome>>artista;
+                playlist.desfavoritar_musica(playlist.buscar_musica(nome, artista)->_id);
+                break;
+            }
+            case 'p':{
+                playlist.imprimir();
+                break;
+            }
+            case 'b':{
+                avaliacao_basica();
+                break;
+            }
+        }
+    }
 
     return 0;
 }
