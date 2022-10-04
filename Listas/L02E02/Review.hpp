@@ -12,7 +12,7 @@ class  Review {
         float  _nota;
 
  public :
-        Review(Filme * filme, std::string  comentario, float nota);
+        Review(Filme * filme, std::string  comentario, float nota=0.0);
         ~ Review();
         void imprimir_review();
         float get_nota();
