@@ -13,7 +13,6 @@ class  Review {
 
  public :
         Review(Filme * filme, std::string  comentario, float nota);
-        ~ Review();
         void imprimir_review();
         float get_nota();
 };

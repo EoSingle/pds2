@@ -3,6 +3,7 @@
 #include "Review.hpp"
 #include <string>
 #include <iostream>
+#include <iomanip>
 
 Filme::Filme(int id, std::string nome, std::string genero, int duracao) {
     _id = id;
@@ -12,7 +13,7 @@ Filme::Filme(int id, std::string nome, std::string genero, int duracao) {
 }
 
 Filme::~Filme() {
-    for (int i = 0; i < _reviews.size(); i++) {
+    for (int i = _reviews.size()-1; i >= 0; i--) {
         delete _reviews[i];
     }
 }
@@ -24,12 +25,19 @@ Review * Filme::adicionar_review(std::string comentario, double nota) {
 }
 
 void Filme::imprimir_nota_consolidada() {
-    double soma = 0;
-    for (int i = 0; i < _reviews.size(); i++) {
-        soma += _reviews[i]->get_nota();
+    if(_reviews.size()!= 0){
+        float soma = 0;
+        for (int i = 0; i < _reviews.size(); i++) {
+            soma += _reviews[i]->get_nota();
+        }
+        std::cout<<std::fixed;
+        std::cout << _nome << "\t" << "Reviews:" << "\t" << _reviews.size() << "\t" << 
+                "Nota media:" << "\t" << std::setprecision(1) << soma/_reviews.size() << std::endl;
     }
-    std::cout << _nome << "\t" << "Reviews:" << "\t" << _reviews.size() << "\t" << 
-                "Nota media:" << "\t" << soma/_reviews.size() << std::endl;
+    else{
+        std::cout << _nome << "\t" << "Reviews:" << "\t" << _reviews.size() << "\t" << 
+                "Nota media:" << "\t" << "0.0" << std::endl;
+    }
 }
 
 std::string Filme::get_nome() {

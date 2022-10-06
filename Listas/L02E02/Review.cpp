@@ -9,10 +9,6 @@ Review::Review(Filme *filme, std::string comentario, float nota) {
     _nota = nota;
 }
 
-Review::~Review() {
-    delete _filme;
-}
-
 void Review::imprimir_review() {
     std::cout << _filme->get_nome() << "\t" << _comentario << "\t" << _nota << std::endl;
 }

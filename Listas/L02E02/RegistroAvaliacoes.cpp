@@ -12,11 +12,11 @@ RegistroAvaliacoes::RegistroAvaliacoes() {
 }
 
 RegistroAvaliacoes::~RegistroAvaliacoes() {
-    for (int i = 0; i < _usuarios.size(); i++) {
-        delete _usuarios[i];
+    for (int i = _usuarios.size()-1; i >= 0; i--) {
+        _usuarios[i]->~Usuario();
     }
-    for (int i = 0; i < _filmes.size(); i++) {
-        delete _filmes[i];
+    for (int i = _filmes.size()-1; i >= 0; i--) {
+        _filmes[i]->~Filme();
     }
 }
 

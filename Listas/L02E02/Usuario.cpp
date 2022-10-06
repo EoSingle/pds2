@@ -9,8 +9,8 @@ Usuario::Usuario(std::string login, std::string nome) {
 }
 
 Usuario::~Usuario() {
-    for (int i = 0; i < _reviews.size(); i++) {
-        delete _reviews[i];
+    for (int i = _reviews.size()-1; i >= 0; i--) {
+        _reviews[i]->~Review();
     }
 }
 
@@ -24,7 +24,7 @@ void Usuario::imprimir_info() {
 
 void Usuario::imprimir_reviews() {
     if(_reviews.size() == 0) {
-        std::cout << "Usuario " << _nome << " não possui reviews!" << std::endl;
+        std::cout << "Usuario " << _nome << " nao possui reviews!" << std::endl;
     } else {
         imprimir_info();
         for (int i = 0; i < _reviews.size(); i++) {
