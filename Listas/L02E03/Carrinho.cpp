@@ -9,6 +9,12 @@ void Carrinho::adicionar_pedido(Produto* produto, int quantidade){
     _pedidos.push_back(pedido);
 }
 
+Carrinho::~Carrinho(){
+    for(int i = 0; i < _pedidos.size(); i++){
+        delete _pedidos[i];
+    }
+}
+
 void Carrinho::imprimir_resumo(){
     float total = 0;
     std::cout << std::fixed;

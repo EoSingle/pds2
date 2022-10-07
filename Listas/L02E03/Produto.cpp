@@ -21,3 +21,5 @@ int Produto::getId(){
 float Produto::getValorUnitario(){
     return _valor_unitario;
 }
+
+void Produto::imprimir_info(){}

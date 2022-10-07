@@ -29,6 +29,6 @@ void Brinquedo::imprimir_info(){
     Produto::imprimir_info();
     std::cout << std::fixed;
     std::cout << getId() << "\t" << "Brinquedo" << "\t" <<getNome() << "\t" <<
-      getIdadeMinima() << "\t" << "R$" << "\t" << std::setprecision(2) << 
+      getIdadeMinima() << "\t" << "R$ " << std::setprecision(2) << 
       getValorUnitario() << std::endl;
 }

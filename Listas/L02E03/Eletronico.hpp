@@ -15,7 +15,7 @@ class Eletronico : public Produto{
         std::string getModelo();
         void setMarca(std::string marca);
         void setModelo(std::string modelo);
-        void imprimir_info();
+        virtual void imprimir_info() override;
 };
 
 

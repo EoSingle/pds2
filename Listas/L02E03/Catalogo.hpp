@@ -2,6 +2,9 @@
 #define CATALOGO_H
 
 #include "Produto.hpp"
+#include "Brinquedo.hpp"
+#include "Livro.hpp"
+#include "Eletronico.hpp"
 #include <vector>
 #include <string>
 

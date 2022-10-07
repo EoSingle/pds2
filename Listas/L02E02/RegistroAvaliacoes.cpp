@@ -43,11 +43,11 @@ void RegistroAvaliacoes::adicionar_review(int id_filme, std::string login_usuari
         std::cout << "Usuario " << login_usuario << " não encontrado!" << std::endl;
         return ;
     }
-    if (id_filme >= _filmes.size()) {
+    if (id_filme > _filmes.size()) {
         std::cout << "Filme " << id_filme << " não encontrado!" << std::endl;
         return ;
     }
-    Review * review = _filmes[id_filme]->adicionar_review(comentario, nota);
+    Review * review = _filmes[id_filme-1]->adicionar_review(comentario, nota);
     usuario->associar_review(review);
 }
 

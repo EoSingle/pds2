@@ -48,9 +48,6 @@ int main() {
                 avaliacao_basica();
                 break;
             }
-            case 'd':{
-                return 0;
-            }
         }
     }
 

@@ -18,7 +18,7 @@ class Livro : public Produto{
         void setTitulo(std::string titulo);
         void setAutor(std::string autor);
         void setAno(int ano);
-        void imprimir_info();
+        virtual void imprimir_info() override;
 };
 
 #endif

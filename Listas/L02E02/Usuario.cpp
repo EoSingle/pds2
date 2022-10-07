@@ -8,11 +8,7 @@ Usuario::Usuario(std::string login, std::string nome) {
     _nome = nome;
 }
 
-Usuario::~Usuario() {
-    for (int i = _reviews.size()-1; i >= 0; i--) {
-        _reviews[i]->~Review();
-    }
-}
+Usuario::~Usuario() {}
 
 void Usuario::associar_review(Review *review) {
     _reviews.push_back(review);

@@ -49,6 +49,7 @@ int main() {
             }
             case 'r':{
                 carrinho.imprimir_resumo();
+                break;
             }
             case 'b':{
                 avaliacao_basica();

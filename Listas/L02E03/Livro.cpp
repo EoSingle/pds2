@@ -13,6 +13,6 @@ void Livro::imprimir_info(){
     Produto::imprimir_info();
     std::cout << std::fixed;
     std::cout << getId() << "\t" << "Livro" << "\t" <<_titulo << "\t" <<
-     _autor << "\t" << _ano << "\t" << "R$" << "\t" << std::setprecision(2)
+     _autor << "\t" << _ano << "\t" << "R$ " << std::setprecision(2)
      << getValorUnitario() << std::endl;
 }

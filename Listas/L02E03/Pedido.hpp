@@ -13,6 +13,7 @@ class Pedido {
         double get_valor_total();
         Produto * get_produto();
         int get_quantidade();
+        ~ Pedido();
 };
 
 #endif

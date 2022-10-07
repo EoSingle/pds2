@@ -6,6 +6,10 @@ Pedido::Pedido(Produto* produto, int quantidade){
     _quantidade = quantidade;
 }
 
+Pedido::~Pedido(){
+    delete _produto;
+}
+
 double Pedido::get_valor_total(){
     return _produto->getValorUnitario() * _quantidade;
 }
