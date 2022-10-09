@@ -27,7 +27,7 @@ int main() {
                 std::string login_usuario, comentario;
                 float nota;
                 std::cin>>id_filme>>login_usuario>>comentario>>nota;
-                registro.adicionar_review(id_filme-1, login_usuario, comentario, nota);
+                registro.adicionar_review(id_filme, login_usuario, comentario, nota);
                 break;
             }
             case 'p':{

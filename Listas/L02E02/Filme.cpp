@@ -31,12 +31,12 @@ void Filme::imprimir_nota_consolidada() {
             soma += _reviews[i]->get_nota();
         }
         std::cout<<std::fixed;
-        std::cout << _nome << "\t" << "Reviews:" << "\t" << _reviews.size() << "\t" << 
-                "Nota media:" << "\t" << std::setprecision(1) << soma/_reviews.size() << std::endl;
+        std::cout << _nome << "\t" << "Reviews:" << " " << _reviews.size() << "\t" << 
+                "Nota media:" << " " << std::setprecision(1) << soma/_reviews.size() << std::endl;
     }
     else{
-        std::cout << _nome << "\t" << "Reviews:" << "\t" << _reviews.size() << "\t" << 
-                "Nota media:" << "\t" << "0.0" << std::endl;
+        std::cout << _nome << "\t" << "Reviews:" << " " << _reviews.size() << "\t" << 
+                "Nota media:" << " " << "0.0" << std::endl;
     }
 }
 

@@ -4,10 +4,12 @@
 #include "Usuario.hpp"
 #include "Filme.hpp"
 #include <vector>
+#include <map>
 
 class  RegistroAvaliacoes {
  private :
-    std::vector < Usuario * >  _usuarios;
+    std::map < std::string , Usuario * >  _usuarios;
+    //std::vector < Usuario * >  _usuarios;
     std::vector < Filme * >  _filmes;
 
  public :
@@ -20,8 +22,5 @@ class  RegistroAvaliacoes {
     void  imprimir_registro_geral();
     void  imprimir_reviews_usuario(std::string login);
 };
-
-
-
 
 #endif

@@ -15,7 +15,7 @@ void Usuario::associar_review(Review *review) {
 }
 
 void Usuario::imprimir_info() {
-    std::cout << _nome << "\t" << "Reviews:" << "\t" << _reviews.size() << std::endl;
+    std::cout << _nome << "\t" << "Reviews:" << " " << _reviews.size() << std::endl;
 }
 
 void Usuario::imprimir_reviews() {
