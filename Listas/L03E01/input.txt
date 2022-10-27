@@ -1,0 +1,7 @@
+add_c 120 1 1000
+add_c 100 4 200
+add_ca 80 0 1000 Tesla
+print
+rm 1
+rm 3
+print

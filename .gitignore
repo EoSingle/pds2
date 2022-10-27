@@ -1,6 +1,0 @@
-# Ignore the .exe
-*.exe
-# Ignore the main binary file
-*main
-# Ignore the .o files
-*.o

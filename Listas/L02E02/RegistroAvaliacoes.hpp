@@ -9,7 +9,6 @@
 class  RegistroAvaliacoes {
  private :
     std::map < std::string , Usuario * >  _usuarios;
-    //std::vector < Usuario * >  _usuarios;
     std::vector < Filme * >  _filmes;
 
  public :

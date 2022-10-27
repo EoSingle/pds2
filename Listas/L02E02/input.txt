@@ -1,0 +1,19 @@
+u joao JoaoSilva
+u maria MariaClara
+u carlos CarlosSouza
+u carla CarlaFerreira
+f StarWars Ficcao 94
+f Avengers Acao 140
+f TheMatrix Ficcao 112
+f Invencivel Drama 134
+r 1 joao Legal! 9
+r 1 maria Legal! 8
+r 1 carlos Ruim! 5
+r 1 carla Ruim! 5
+r 2 carla Medio! 7
+r 3 carla Eca! 5.5
+r 3 joao Otimo! 9.5
+r 4 carla Amei! 10.0
+p
+s
+l carla
