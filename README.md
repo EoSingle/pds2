@@ -22,6 +22,11 @@ Listas e Trabalhos feitos durante a matéria de PDS2
 - Exercício 3: Pilha Polimórfica
 - Exercício 4: Aquário de Ponteiros
 
+### Lista 4
+- Exercício 1: Revisão de código e Refatoração
+- Exercício 2: Map Excepcional
+- Exercício 3: Diário Classe
+
 ## Projeto Final:
 
 ### Jogo Top-Down
